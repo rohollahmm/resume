@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Resume — Ruhollah Malek Mohammadi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --text:#0f172a; --muted:#475569; --accent:#2563eb; --accent-dark:#1d4ed8;
+    --heading:#0b1220; --border:#e5e7eb; --bg:#ffffff; --chip:#eef2ff; --page-m:22mm;
+    --card:#ffffff; --shadow:0 6px 18px rgba(0,0,0,.06);
+  }
+  @page { size: A4; margin: var(--page-m); }
+  *{ box-sizing:border-box; }
+  html, body { height:100%; }
+  body{
+    margin:0; background:var(--bg);
+    font: 13.5px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color:var(--text);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .wrap{ max-width: 860px; margin: 0 auto; }
+
+  /* Header */
+  header{
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    color:#fff; border-radius: 14px; padding: 20px 22px; margin: 10px 0 14px;
+    display:flex; gap:18px; align-items:flex-start; box-shadow: var(--shadow);
+  }
+  .name{ font-size: 28px; font-weight: 800; line-height: 1.2; letter-spacing:.2px; }
+  .title{ font-size: 14px; opacity:.95; margin-top:4px; font-weight:600; }
+  .contacts{ margin-left:auto; text-align:right; font-size: 12.8px; }
+  .contacts a{ color:#fff; text-decoration:none; border-bottom:1px solid transparent; }
+  .contacts a:hover{ border-bottom-color:#fff; }
+
+  /* Sections */
+  section{ margin: 14px 0; }
+  h2{
+    font-size: 13.5px; text-transform: uppercase; letter-spacing: .4px; color: var(--heading);
+    margin: 16px 0 8px; font-weight: 800; position: relative; padding-left: 10px;
+  }
+  h2:before{
+    content:""; position:absolute; left:0; top: 50%; transform: translateY(-50%);
+    width: 4px; height: 16px; border-radius: 3px; background: var(--accent);
+  }
+  p.small{ color:var(--text); opacity:.92; margin: 6px 0 0; }
+
+  /* Layout */
+  .two-col{ display:grid; grid-template-columns: 1.65fr 1fr; gap: 18px; }
+  @media (max-width: 860px), print {
+    .two-col{ grid-template-columns: 1fr; gap: 8px; }
+    .contacts{ text-align:left; margin-left:0; }
+  }
+
+  /* Cards & lists */
+  .card{
+    background: var(--card); border:1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; margin-bottom: 10px; box-shadow: var(--shadow);
+  }
+  .job-head{ display:flex; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+  .role{ font-weight: 700; color: var(--heading); }
+  .meta{ color: var(--muted); font-size: 12.5px; }
+  ul{ margin: 6px 0 0 18px; padding:0; }
+  li{ margin: 4px 0; }
+  .achievements li{ list-style: "– "; padding-left: 6px; }
+
+  /* Chips */
+  .chip{
+    display:inline-block; padding: 6px 10px; font-size: 12.2px; font-weight: 600;
+    background: var(--chip); color: #1e293b; border: 1px solid #c7d2fe; border-radius: 999px;
+    margin: 4px 6px 0 0;
+  }
+
+  .edu-item{ display:flex; justify-content:space-between; gap:10px; }
+  .small{ font-size:12.6px; color: var(--muted); }
+
+  /* Footer note */
+  .note{ text-align:center; color:var(--muted); font-size:12px; margin-top: 10px; }
+
+  /* Print tweaks */
+  @media print {
+    header{ border-radius: 0; box-shadow: none; }
+    .card{ box-shadow: none; }
+    a{ color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="name">Ruhollah Malek Mohammadi</div>
+      <div class="title">Mobile Software Engineer (Android • Flutter • React Native)</div>
+    </div>
+    <div class="contacts">
+      <div>Isfahan, Iran</div>
+      <div><a href="mailto:dev.rohollahmm@gmail.com">dev.rohollahmm@gmail.com</a> • +98 903 793 1622</div>
+      <div>
+        <!-- TODO: Replace with your actual LinkedIn URL -->
+        <a href="https://linkedin.com/in/rohollahmalekmohammadi" aria-label="LinkedIn">linkedin.com/in/rohollahmalekmohammadi</a>
+        <!-- Optional GitHub/Portfolio -->
+         <a href="https://github.com/rohollahmm">github.com/rohollahmm</a> 
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="small">
+      Mobile Software Engineer with 6+ years of experience building Android, Flutter, and React Native apps across IoT,
+      consumer electronics, and security systems. Strong in Clean Architecture, MVVM/MVP, REST/gRPC, MQTT/Socket.IO,
+      and end‑to‑end delivery from UI/UX to publishing. Notable work includes smart‑home control and alarm systems
+      used in production. Seeking to contribute to international teams on impactful mobile products.
+    </p>
+  </section>
+
+  <div class="two-col">
+    <section>
+      <h2>Experience</h2>
+
+      <div class="card">
+        <div class="job-head">
+          <div>
+            <div class="role">Mobile Front‑End Engineer</div>
+            <div class="meta">Entekhab Industrial Group — Isfahan, Iran</div>
+          </div>
+          <div class="meta">Nov 2022 — Present</div>
+        </div>
+        <ul class="achievements">
+          <li>Built <b>SmartBoom</b> IoT mobile app (Android/iOS) with Flutter, GetX, and Clean Architecture to remotely control home appliances via <b>MQTT</b> and cloud services.</li>
+          <li>Implemented responsive UI/UX and <b>Google TV</b> compatibility; collaborated with back‑end on RESTful APIs.</li>
+          <li>Improved code maintainability through modularization and <b>unit/integration testing</b>; versioned with Git (GitHub/GitLab).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="job-head">
+          <div>
+            <div class="role">Mobile Developer</div>
+            <div class="meta">SmartAlarm — Isfahan, Iran</div>
+          </div>
+          <div class="meta">May 2018 — Present</div>
+        </div>
+        <ul class="achievements">
+          <li>Developed <b>SmartAlarm User</b> and <b>SmartAlarm Setup</b> Android apps in Java/Kotlin using MVP/MVVM, Room/SQLite, Retrofit, and <b>RESTful authentication</b>.</li>
+          <li>Implemented real‑time features with <b>Socket.IO</b>; integrated Google Maps/Geolocation and media streaming with <b>ExoPlayer/HLS</b>.</li>
+          <li>Applied security hardening (<b>RSA/AES</b>, ProGuard, FileProvider, Multidex); integrated <b>Firebase</b> (Crash Reporting, Analytics).</li>
+          <li>Built and maintained the English product website with HTML5/CSS3/JavaScript.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="job-head">
+          <div>
+            <div class="role">Senior Mobile Developer</div>
+            <div class="meta">Barbod — Isfahan, Iran</div>
+          </div>
+          <div class="meta">Jun 2019 — Nov 2021</div>
+        </div>
+        <ul class="achievements">
+          <li>Delivered Android applications using Java/Kotlin, Retrofit, RxAndroid, and AndroidX, following <b>Clean Architecture</b>.</li>
+          <li>Collaborated with cross‑functional teams to ship features and improve app performance and stability.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="job-head">
+          <div>
+            <div class="role">Mobile Developer</div>
+            <div class="meta">Sotel — Isfahan, Iran</div>
+          </div>
+          <div class="meta">Oct 2019 — Jan 2021</div>
+        </div>
+        <ul class="achievements">
+          <li>Built e‑learning and kids edutainment Android apps using Java, Retrofit, Glide, and Gson; integrated <b>Firebase</b> and Google APIs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div>
+        <span class="chip">Dart</span>
+        <span class="chip">Java</span>
+        <span class="chip">Kotlin</span>
+        <span class="chip">Swift</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Android SDK</span>
+        <span class="chip">Flutter (GetX)</span>
+        <span class="chip">React Native</span>
+        <span class="chip">Clean Architecture</span>
+        <span class="chip">MVVM/MVP</span>
+        <span class="chip">REST / gRPC</span>
+        <span class="chip">MQTT / Socket.IO</span>
+        <span class="chip">Firebase</span>
+        <span class="chip">Git (GitHub/GitLab)</span>
+        <span class="chip">Unit/Integration Testing</span>
+      </div>
+
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div><b>B.Sc. in Information Technology</b> — Islamic Azad University, Najafabad Branch</div>
+        <div class="meta">Oct 2015 — Sep 2019</div>
+      </div>
+      <div class="small">GPA: 15.5/20 • Notable grade: Advanced Programming (20/20)</div>
+
+      <h2>Languages</h2>
+      <div class="small">Persian (Native), English (Working proficiency — please confirm)</div>
+
+      <h2>Soft Skills</h2>
+      <div class="small">Accountability, Teamwork, Remote coordination, Time management, Adaptability, Openness to feedback, Creativity, Communication</div>
+    </section>
+  </div>
+
+  <section>
+    <h2>Selected Projects</h2>
+    <div class="card">
+      <ul>
+        <li><b>SmartBoom</b> (Jul 2023) — Smart‑home appliance control app; Flutter (GetX), MQTT, Clean Architecture; Android & iOS.</li>
+        <li><b>Darobox</b> (Sep 2022) — Online pharmacy ordering; React Native, Redux; map address pick, online prescriptions.</li>
+        <li><b>Home IoT</b> (Apr 2023) — Control of smart devices over LAN/Internet; React Native, React, Redux.</li>
+        <li><b>SmartAlarm User / Setup</b> (2021–2022) — Android apps for alarm control/provisioning; MVP/MVVM, Room/SQLite, Socket.IO, Firebase.</li>
+        <li><b>Bank Saderat Isfahan “Refah”</b> (Apr 2021) — Android app; Retrofit, Firebase, Google APIs, RSA/AES.</li>
+      </ul>
+    </div>
+  </section>
+
+ 
+</div>
+</body>
+</html>

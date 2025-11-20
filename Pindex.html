@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رزومه — روح‌الله ملک محمدی</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
+<style>
+  :root{
+    --text:#0f172a; --muted:#475569; --accent:#2563eb; --accent-dark:#1d4ed8;
+    --heading:#0b1220; --border:#e5e7eb; --bg:#ffffff; --chip:#eef2ff; --page-m:22mm;
+    --card:#ffffff; --shadow:0 6px 18px rgba(0,0,0,.06);
+  }
+  @page { size: A4; margin: var(--page-m); }
+  *{ box-sizing:border-box; }
+  html, body { height:100%; }
+  body{
+    margin:0; background:var(--bg);
+    font: 13.5px/1.6 "Vazir", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color:var(--text);
+    direction: rtl;
+    text-align: right;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .wrap{ max-width: 860px; margin: 0 auto; }
+
+  /* Header */
+  header{
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    color:#fff; border-radius: 14px; padding: 20px 22px; margin: 10px 0 14px;
+    display:flex; gap:18px; align-items:flex-start; box-shadow: var(--shadow);
+    flex-direction: row-reverse; /* برای اینکه اسم سمت راست باشد */
+  }
+  .name{ font-size: 28px; font-weight: 800; line-height: 1.2; letter-spacing:.2px; }
+  .title{ font-size: 14px; opacity:.95; margin-top:4px; font-weight:600; }
+  .contacts{
+    font-size: 12.8px;
+    text-align: right;   /* راست‌چین شدن متن مشخصات */
+    /* margin-right:auto;  حذف شد تا کل هدر از راست جدا نشود */
+  }
+  .contacts a{ color:#fff; text-decoration:none; border-bottom:1px solid transparent; }
+  .contacts a:hover{ border-bottom-color:#fff; }
+
+  /* Sections */
+  section{ margin: 14px 0; }
+  h2{
+    font-size: 13.5px; text-transform: uppercase; letter-spacing: .4px; color: var(--heading);
+    margin: 16px 0 8px; font-weight: 800; position: relative; padding-right: 10px;
+  }
+  h2:before{
+    content:""; position:absolute; right:0; top: 50%; transform: translateY(-50%);
+    width: 4px; height: 16px; border-radius: 3px; background: var(--accent);
+  }
+  p.small{ color:var(--text); opacity:.92; margin: 6px 0 0; }
+
+  /* Layout */
+  .two-col{ display:grid; grid-template-columns: 1.65fr 1fr; gap: 18px; }
+  @media (max-width: 860px), print {
+    .two-col{ grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  /* Cards & lists */
+  .card{
+    background: var(--card); border:1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; margin-bottom: 10px; box-shadow: var(--shadow);
+  }
+  .job-head{ display:flex; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+  .role{ font-weight: 700; color: var(--heading); }
+  .meta{ color: var(--muted); font-size: 12.5px; }
+  ul{ margin: 6px 18px 0 0; padding:0; }
+  li{ margin: 4px 0; }
+  .achievements li{ list-style: "– "; padding-right: 6px; }
+
+  /* Chips */
+  .chip{
+    display:inline-block; padding: 6px 10px; font-size: 12.2px; font-weight: 600;
+    background: var(--chip); color: #1e293b; border: 1px solid #c7d2fe; border-radius: 999px;
+    margin: 4px 0 0 6px;
+  }
+
+  .edu-item{ display:flex; justify-content:space-between; gap:10px; }
+  .small{ font-size:12.6px; color: var(--muted); }
+
+  /* Footer note */
+  .note{ text-align:center; color:var(--muted); font-size:12px; margin-top: 10px; }
+
+  /* Print tweaks */
+  @media print {
+    header{ border-radius: 0; box-shadow: none; }
+    .card{ box-shadow: none; }
+    a{ color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+
+    <div class="contacts">
+      <div>اصفهان، ایران</div>
+      <div><a href="mailto:dev.rohollahmm@gmail.com">dev.rohollahmm@gmail.com</a> • +98 903 793 1622</div>
+      <div>
+        <a href="https://linkedin.com/in/rohollahmalekmohammadi" aria-label="LinkedIn">linkedin.com/in/rohollahmalekmohammadi</a>
+        <a href="https://github.com/rohollahmm">github.com/rohollahmm</a> 
+      </div>
+    </div>
+
+    <div>
+      <div class="name">روح‌الله ملک محمدی</div>
+      <div class="title">مهندس نرم‌افزار موبایل (Android • Flutter • React Native)</div>
+    </div>
+
+  </header>
+
+  <section>
+    <h2>خلاصه‌ حرفه‌ای</h2>
+    <p class="small">
+      مهندس نرم‌افزار موبایل با بیش از ۶ سال تجربه در توسعه اپلیکیشن‌های Android، Flutter و React Native
+      در حوزه‌های اینترنت اشیا (IoT)، لوازم الکترونیکی مصرفی و سامانه‌های امنیتی. مسلط به Clean Architecture،
+      MVVM/MVP، REST/gRPC، MQTT/Socket.IO و فرایند تحویل سرتاسری از UI/UX تا انتشار. از مهم‌ترین پروژه‌ها
+      می‌توان به سامانه‌های کنترل خانه هوشمند و سیستم‌های هشداردهنده در محیط عملیاتی اشاره کرد. علاقه‌مند
+      به همکاری با تیم‌های بین‌المللی روی محصولات موبایلی تأثیرگذار.
+    </p>
+  </section>
+
+  <div class="two-col">
+    <section>
+      <h2>سوابق شغلی</h2>
+
+      <div class="card">
+        <div class="job-head">
+          <div>
+            <div class="role">مهندس فرانت‌اند موبایل</div>
+            <div class="meta">گروه صنعتی انتخاب — اصفهان، ایران</div>
+          </div>
+          <div class="meta">نوامبر 2022 — تاکنون</div>
+        </div>
+        <ul class="achievements">
+          <li>توسعه اپلیکیشن موبایل اینترنت اشیا <b>SmartBoom</b> (اندروید و iOS) با استفاده از Flutter، GetX و Clean Architecture برای کنترل از راه دور لوازم خانگی از طریق <b>MQTT</b> و سرویس‌های ابری.</li>
+          <li>پیاده‌سازی UI/UX واکنش‌گرا و سازگاری با <b>Google TV</b>؛ همکاری با تیم بک‌اند در طراحی و توسعه APIهای RESTful.</li>
+          <li>بهبود نگه‌داشت‌پذیری کد از طریق ماژولار کردن پروژه و افزودن <b>تست‌های واحد و یکپارچه</b>؛ استفاده از Git (GitHub/GitLab) برای کنترل نسخه.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="job-head">
+          <div>
+            <div class="role">توسعه‌دهنده موبایل</div>
+            <div class="meta">SmartAlarm — اصفهان، ایران</div>
+          </div>
+          <div class="meta">مه 2018 — تاکنون</div>
+        </div>
+        <ul class="achievements">
+          <li>توسعه اپلیکیشن‌های اندروید <b>SmartAlarm User</b> و <b>SmartAlarm Setup</b> با Java/Kotlin و معماری‌های MVP/MVVM، استفاده از Room/SQLite، Retrofit و <b>احراز هویت RESTful</b>.</li>
+          <li>پیاده‌سازی قابلیت‌های بلادرنگ با <b>Socket.IO</b>؛ یکپارچه‌سازی Google Maps/Geolocation و پخش رسانه با <b>ExoPlayer/HLS</b>.</li>
+          <li>اعمال تقویت‌های امنیتی شامل <b>RSA/AES</b>، ProGuard، FileProvider و Multidex؛ یکپارچه‌سازی <b>Firebase</b> (Crash Reporting، Analytics).</li>
+          <li>طراحی و نگه‌داری وب‌سایت انگلیسی محصول با استفاده از HTML5/CSS3/JavaScript.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="job-head">
+          <div>
+            <div class="role">توسعه‌دهنده ارشد موبایل</div>
+            <div class="meta">Barbod — اصفهان، ایران</div>
+          </div>
+          <div class="meta">ژوئن 2019 — نوامبر 2021</div>
+        </div>
+        <ul class="achievements">
+          <li>توسعه و تحویل اپلیکیشن‌های اندروید با استفاده از Java/Kotlin، Retrofit، RxAndroid و AndroidX با پیروی از اصول <b>Clean Architecture</b>.</li>
+          <li>همکاری با تیم‌های چندتخصصی برای عرضه ویژگی‌های جدید و بهبود کارایی و پایداری اپلیکیشن.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="job-head">
+          <div>
+            <div class="role">توسعه‌دهنده موبایل</div>
+            <div class="meta">Sotel — اصفهان، ایران</div>
+          </div>
+          <div class="meta">اکتبر 2019 — ژانویه 2021</div>
+        </div>
+        <ul class="achievements">
+          <li>توسعه اپلیکیشن‌های اندروید در حوزه آموزش الکترونیک و سرگرمی آموزشی کودکان با Java، Retrofit، Glide و Gson؛ یکپارچه‌سازی <b>Firebase</b> و سرویس‌های Google.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>مهارت‌ها</h2>
+      <div>
+        <span class="chip">Dart</span>
+        <span class="chip">Java</span>
+        <span class="chip">Kotlin</span>
+        <span class="chip">Swift</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Android SDK</span>
+        <span class="chip">Flutter (GetX)</span>
+        <span class="chip">React Native</span>
+        <span class="chip">Clean Architecture</span>
+        <span class="chip">MVVM/MVP</span>
+        <span class="chip">REST / gRPC</span>
+        <span class="chip">MQTT / Socket.IO</span>
+        <span class="chip">Firebase</span>
+        <span class="chip">Git (GitHub/GitLab)</span>
+        <span class="chip">Unit/Integration Testing</span>
+      </div>
+
+      <h2>تحصیلات</h2>
+      <div class="edu-item">
+        <div><b>کارشناسی فناوری اطلاعات</b> — دانشگاه آزاد اسلامی واحد نجف‌آباد</div>
+        <div class="meta">اکتبر 2015 — سپتامبر 2019</div>
+      </div>
+      <div class="small">معدل: 15.5 از 20 • نمره شاخص: برنامه‌نویسی پیشرفته (20 از 20)</div>
+
+      <h2>زبان‌ها</h2>
+      <div class="small">فارسی (زبان مادری)، انگلیسی (تسلط در سطح کاری — لطفاً تأیید شود)</div>
+
+      <h2>مهارت‌های فردی</h2>
+      <div class="small">مسئولیت‌پذیری، کار تیمی، هماهنگی در محیط دورکار، مدیریت زمان، سازگاری، پذیرش بازخورد، خلاقیت، مهارت ارتباطی</div>
+    </section>
+  </div>
+
+  <section>
+    <h2>پروژه‌های منتخب</h2>
+    <div class="card">
+      <ul>
+        <li><b>SmartBoom</b> (ژوئیه 2023) — اپلیکیشن کنترل لوازم خانه هوشمند؛ Flutter (GetX)، MQTT، Clean Architecture؛ اندروید و iOS.</li>
+        <li><b>Darobox</b> (سپتامبر 2022) — سامانه سفارش آنلاین داروخانه؛ React Native، Redux؛ انتخاب آدرس روی نقشه و ثبت نسخه آنلاین.</li>
+        <li><b>Home IoT</b> (آوریل 2023) — کنترل دستگاه‌های هوشمند از طریق LAN و اینترنت؛ React Native، React، Redux.</li>
+        <li><b>SmartAlarm User / Setup</b> (2021–2022) — اپلیکیشن‌های اندروید برای کنترل و راه‌اندازی سیستم‌های اعلام هشدار؛ MVP/MVVM، Room/SQLite، Socket.IO، Firebase.</li>
+        <li><b>بانک صادرات اصفهان «رفاه»</b> (آوریل 2021) — اپلیکیشن اندروید؛ Retrofit، Firebase، APIهای Google، رمزنگاری RSA/AES.</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
