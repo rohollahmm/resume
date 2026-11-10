@@ -32,7 +32,7 @@
     color:var(--text);
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
-  .wrap{ max-width: 860px; margin: 0 auto; }
+  .wrap{ max-width: 860px; margin: 0 auto; padding: 0 16px; }
 
   /* Header */
   header{
@@ -42,7 +42,7 @@
   }
   .name{ font-size: 28px; font-weight: 800; line-height: 1.2; letter-spacing:.2px; }
   .title{ font-size: 14px; opacity:.95; margin-top:4px; font-weight:600; }
-  .contacts{ margin-left:auto; text-align:right; font-size: 12.8px; }
+  .contacts{ margin-left:auto; text-align:right; font-size: 12.8px; min-width: 0; overflow-wrap: anywhere; }
   .contacts a{ color:#fff; text-decoration:none; border-bottom:1px solid transparent; }
   .contacts a:hover{ border-bottom-color:#fff; }
 
@@ -87,6 +87,24 @@
   .edu-item{ display:flex; justify-content:space-between; gap:10px; }
   .small{ font-size:12.6px; color: var(--muted); }
 
+  /* Responsive: tablets & phones */
+  @media (max-width: 640px){
+    .wrap{ padding: 0 12px; }
+    .lang-bar{ flex-wrap: wrap; padding-top: 10px; }
+    .lang-switch{ padding: 6px 12px; font-size: 12px; }
+    header{ flex-direction: column; gap: 10px; padding: 16px; }
+    .name{ font-size: 22px; word-break: break-word; }
+    .title{ font-size: 13px; }
+    .contacts{ text-align: left; margin-left: 0; font-size: 12.2px; }
+    .card{ padding: 10px 12px; }
+    .job-head{ flex-direction: column; gap: 2px; }
+    .edu-item{ flex-direction: column; gap: 2px; }
+    .chip{ font-size: 11.6px; padding: 5px 9px; }
+    h2{ margin: 14px 0 6px; }
+    section{ margin: 12px 0; }
+    ul{ margin-left: 16px; }
+  }
+
   /* Language switch */
   .lang-bar{ display:flex; justify-content:flex-end; gap: 8px; padding: 12px 0 0; }
   .lang-switch{
@@ -113,6 +131,7 @@
       --text:#0f172a; --muted:#475569; --heading:#0b1220; --border:#e5e7eb;
       --bg:#ffffff; --chip:#eef2ff; --card:#ffffff; --chip-text:#1e293b; --chip-border:#c7d2fe;
     }
+    .wrap{ padding: 0; }
     header{ border-radius: 0; box-shadow: none; }
     .card{ box-shadow: none; }
     .lang-bar{ display:none; }
