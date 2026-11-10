@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script>
-  try{ if(localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme','dark'); }catch(e){}
+  document.documentElement.setAttribute('data-theme','dark');
+  try{ if(localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme','light'); }catch(e){}
 </script>
 <style>
   :root{
@@ -124,7 +125,7 @@
 
   <div class="lang-bar">
     <button type="button" class="lang-switch theme-switch" id="theme-toggle" aria-label="Switch to dark theme" title="Switch to dark theme">🌙 Dark</button>
-    <a class="lang-switch" href="Pindex.html" hreflang="fa" lang="fa" title="نمایش نسخه فارسی">فارسی</a>
+    <a class="lang-switch" href="Pindex.html" hreflang="fa" lang="fa" title="نمایش نسخه فارسی" onclick="try{localStorage.setItem('lang','fa')}catch(e){}">فارسی</a>
   </div>
 
   <header>
@@ -281,8 +282,8 @@
     btn.setAttribute('aria-label', label);
     btn.setAttribute('title', label);
   }
-  var saved = 'light';
-  try{ saved = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'; }catch(e){}
+  var saved = 'dark';
+  try{ saved = localStorage.getItem('theme') === 'light' ? 'light' : 'dark'; }catch(e){}
   apply(saved);
   btn.addEventListener('click', function(){
     var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';

@@ -7,7 +7,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
 <script>
-  try{ if(localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme','dark'); }catch(e){}
+  document.documentElement.setAttribute('data-theme','dark');
+  try{ if(localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme','light'); }catch(e){}
+  try{ if(localStorage.getItem('lang') !== 'fa') location.replace('index.html'); }catch(e){}
 </script>
 <style>
   :root{
@@ -132,7 +134,7 @@
 
   <div class="lang-bar">
     <button type="button" class="lang-switch theme-switch" id="theme-toggle" aria-label="Switch to dark theme" title="Switch to dark theme">🌙 Dark</button>
-    <a class="lang-switch" href="index.html" hreflang="en" lang="en" title="Show English version">English</a>
+    <a class="lang-switch" href="index.html" hreflang="en" lang="en" title="Show English version" onclick="try{localStorage.setItem('lang','en')}catch(e){}">English</a>
   </div>
 
   <header>
@@ -293,8 +295,8 @@
     btn.setAttribute('aria-label', label);
     btn.setAttribute('title', label);
   }
-  var saved = 'light';
-  try{ saved = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'; }catch(e){}
+  var saved = 'dark';
+  try{ saved = localStorage.getItem('theme') === 'light' ? 'light' : 'dark'; }catch(e){}
   apply(saved);
   btn.addEventListener('click', function(){
     var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
